@@ -17,10 +17,8 @@ function Quiz() {
                 {
                     questions.map((element, index) => {
                         return (
-                            <>
-                                <h3>Question {index + 1}</h3>
-                                <Question element={element} id={index} />
-                            </>
+
+                            <Question key={index} element={element} id={index} />
                         )
                     })
                 }

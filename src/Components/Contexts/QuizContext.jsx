@@ -13,6 +13,7 @@ export default function QuizContextProvider({ children }) {
     correct: 'Islamabad',
   }
   ]);
+  const [incorrectAns, setIncorrectAnswers] = useState(questions)
   const [score, setScore] = useState(0);
   const [endQuiz, setEndQuiz] = useState(false);
 
@@ -20,7 +21,7 @@ export default function QuizContextProvider({ children }) {
 
 
   return (
-    <QuizContext.Provider value={{ questions, score, setScore, endQuiz, setEndQuiz }}>
+    <QuizContext.Provider value={{ questions, score, setScore, endQuiz, setEndQuiz, incorrectAns, setIncorrectAnswers }}>
       {children}
     </QuizContext.Provider>
   )
