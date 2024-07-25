@@ -3,13 +3,17 @@ import { QuizContext } from '../Contexts/QuizContext'
 
 function Question({ element, id }) {
     const { score, setScore } = useContext(QuizContext);
-    const initialScore = useRef(score);
+    const history = useRef(0);
     function handleAnswer(e) {
         if (e.target.value === element.correct) {
             setScore(score + 10)
+            history.current += 10;
         }
         else {
-            setScore(initialScore.current)
+            setScore(score - history.current);
+            if (history.current > 0) {
+                history.current -= 10;
+            }
         }
 
 

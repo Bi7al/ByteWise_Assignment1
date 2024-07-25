@@ -4,7 +4,7 @@ import { QuizContext } from "../Contexts/QuizContext"
 import Question from './Question';
 function Quiz() {
     const { userdata } = useContext(UserContext);
-    const { questions, score } = useContext(QuizContext);
+    const { questions, setEndQuiz } = useContext(QuizContext);
     return (
         <div className="container">
             <div className="greeeting">
@@ -24,7 +24,7 @@ function Quiz() {
                         )
                     })
                 }
-                {score}
+                <button onClick={() => setEndQuiz(true)}>End Quiz / Submit</button>
             </div>
         </div>
     )

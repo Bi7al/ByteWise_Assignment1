@@ -8,7 +8,7 @@ function Result() {
     return (
         <>
             <h1>Result</h1>
-            <h2>Username: {userdata.username}</h2>
+            <h2>Username: {userdata.userName}</h2>
             <h2>Score: {score}</h2>
 
         </>)

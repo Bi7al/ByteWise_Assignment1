@@ -11,7 +11,7 @@ function App() {
     return (
         <>
             {
-                endQuiz.current ? <Result /> : <>{userdata.userName ? <Quiz /> : <Credentials />}</>
+                endQuiz ? <Result /> : <>{userdata.userName ? <Quiz /> : <Credentials />}</>
             }
         </>
 

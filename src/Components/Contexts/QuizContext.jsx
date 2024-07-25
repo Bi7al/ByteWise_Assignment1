@@ -14,13 +14,13 @@ export default function QuizContextProvider({ children }) {
   }
   ]);
   const [score, setScore] = useState(0);
-  const endQuiz = useRef(false);
+  const [endQuiz, setEndQuiz] = useState(false);
 
 
 
 
   return (
-    <QuizContext.Provider value={{ questions, score, setScore, endQuiz }}>
+    <QuizContext.Provider value={{ questions, score, setScore, endQuiz, setEndQuiz }}>
       {children}
     </QuizContext.Provider>
   )
