@@ -10,18 +10,14 @@ function Result() {
             <h1>Result</h1>
             <h2>Username: {userdata.userName}</h2>
             <h2>Score: {score}</h2>
+            <h2>Incorrect Answers: </h2>
             {
-                score > 0 ? <div>
-                    <h2>Incorrect Answers: </h2>
-                    {
 
-                        incorrectAns.map((ans, index) => {
-                            return (
-                                <p key={index} style={{ color: 'red' }}><b>Incorrect Question: </b>{ans.question} <br /><b>Correct Answer: </b>{ans.correct}</p>
-                            )
-                        })
-                    }
-                </div> : <></>
+                incorrectAns.map((ans, index) => {
+                    return (
+                        <p key={index} style={{ color: 'red' }}><b>Incorrect Question: </b>{ans.question} <br /><b>Correct Answer: </b>{ans.correct}</p>
+                    )
+                })
             }
 
         </>)
