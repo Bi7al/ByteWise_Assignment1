@@ -1,0 +1,22 @@
+.results{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    text-align: start;
+    width: 40rem;
+    color: white;
+    .incorrect-answers{
+        color: rgb(26, 0, 50);
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        flex-wrap: wrap;
+        height: 10rem;
+    }
+    h1{
+        font-weight: 500;
+        font-stretch: expanded;
+    }
+}

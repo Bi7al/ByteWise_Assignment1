@@ -1,11 +1,12 @@
 import React, { useRef } from 'react'
 import { UserContext } from '../Contexts/UserContext';
+import "./Credentials.css"
 function Credentials() {
     const { userdata, setUserData } = React.useContext(UserContext);
     const inputRef = useRef();
     return (
         <div className="credentials">
-            <label htmlFor="name"><h5>Enter Your Name</h5></label>
+            <label htmlFor="name"><h3>Enter Your Name</h3></label>
             <input
                 type="text"
                 id='name'
