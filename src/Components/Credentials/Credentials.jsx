@@ -15,7 +15,7 @@ function Credentials() {
                 required={true}
                 ref={inputRef}
             />
-            <button onClick={() => setUserData({ ...userdata, userName: inputRef.current.value })}>Submit</button>
+            <button onClick={() => setUserData({ ...userdata, userName: inputRef.current.value })}>Staert Quiz</button>
         </div>
     )
 }
