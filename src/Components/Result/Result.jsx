@@ -5,13 +5,14 @@ import "./Result.css"
 function Result() {
     const { userdata } = useContext(UserContext);
     const { score, incorrectAns, totalQuestions } = useContext(QuizContext);
+    const percentObtianed = (score / (10 * totalQuestions)) * 100;
     return (
         <div className='results'>
             <div>
                 <h1>Result</h1>
                 <br />
                 <h2>Score: {score}/{10 * totalQuestions}</h2>
-                <h2>Percentile: {(score / (10 * totalQuestions)) * 100} %</h2>
+                <h2>Percentile: {percentObtianed} %</h2>
                 <h2>Username: {userdata.userName}</h2>
             </div>
             {
@@ -25,7 +26,7 @@ function Result() {
                             )
                         })
                     }
-                </div></> : <h4>Wow You Scored 100%, Congratulations</h4>
+                </div></> : <h4>Wow You Scored {percentObtianed}, Congratulations</h4>
 
             }
 
